@@ -1,41 +1,119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.6">
-  <style type="text/css">
-    body {background-color: #000000}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Times; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 14.0px}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Songti SC'; color: #23ff06; -webkit-text-stroke: #23ff06}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px 'Songti SC'; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 21.0px Times; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Songti SC'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #000000; background-color: rgba(0, 0, 0, 0.7); min-height: 14.0px}
-    span.s1 {font-kerning: none; text-shadow: 0.0px 0.0px 80.0px #000000}
-    span.s2 {font: 12.0px Times; font-kerning: none; color: #ffffff; -webkit-text-stroke: 0px #ffffff; text-shadow: 0.0px 0.0px 80.0px #000000}
-    span.s3 {font: 21.0px Times; font-kerning: none; text-shadow: 0.0px 0.0px 80.0px #000000}
-    span.s4 {font: 21.0px 'Songti SC'; font-kerning: none; text-shadow: 0.0px 0.0px 80.0px #000000}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>黑客页面</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            background: #000;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-shadow: 0px 0px 80px;
+        }
+        h1{
+            margin: 0;
+            padding: 0;
+            color: #0ff;
+        }
+        a{color: #fff;}
+        p{margin: 0;}
+        .box{
+            width: 700px;
+            text-align: center;
+            /* border: 1px solid #f00; */
+            color: #fff;
+            position: absolute;
+            margin: 20px auto 0;
+            top: 20px;
+            left: 0;
+            right: 0;
+        }
+        img{
+            width: 700px;
+            height: 390px;
+            border: 2px solid #222;
+            border-radius: 5px;
+            transition: 0.8s;
+			opacity: 0.4;
+        }
+        .img2:hover{border: 2px solid #980b18}
+        .box>div{padding: 20px;}
+        .szj{
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            padding: 5px;
+            border: 1px solid #eee;
+            background-color: rgb(0,0,0,0.7)
+        }
+        .yl{display: inline;border-bottom:1px dotted #0ff;}
+        .yl a{text-decoration: none;color:#c6d491;}
+        .yl span{margin-right: 8px;}
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1"></span></p>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Times; color: #21ffff; -webkit-text-stroke: #21ffff"><span class="s1"><b>Hacker by SSH</b></span></h1>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p4"><span class="s1">你的网站存在以下漏洞</span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p5"><span class="s3">SSH</span><span class="s1">暴露漏洞</span></p>
-<p class="p6"><span class="s1">SSH</span><span class="s4">弱密码</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p7"><span class="s1">安全之路，永不妥协</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p8"><span class="s1"></span><br></p>
+    <canvas id="canvas"></canvas>
+    <div class="box">
+        <!-- 图片部分 -->
+        <img class="img2" src="hack.jpg" alt="">
+        <div class="text">
+            <h1>Hacker by SSH</h1>
+            <br>
+            <span style="color: #0f0">>你的网站存在以下漏洞</span>
+			<br><br>
+            <p class="glow" style="color: #f00; font-size:21px;">SSH 暴露漏洞</p>
+            <p class="glow" style="color: #f00; font-size:21px;">SSH 弱密码</p>
+            <br>
+            <br><br>
+            <P class="glow">安全之路，永不妥协</P>
+			<br><br><br><br>
+        </div>
+    </div>
+    <div class="szj">
+
+    <!-- 以下js -->
+    <script>
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+		canvas.height = window.innerHeight;
+		canvas.width = window.innerWidth;
+        // 下面的雷军就是代码雨的文字
+		var texts = '乾坎艮震巽离坤兑甲乙丙丁午己庚辛壬癸子丑演卯辰巳无为申酉戌亥'.split('');
+
+		var fontSize = 16;
+		var columns = canvas.width/fontSize;
+		// 用于计算输出文字时坐标，所以长度即为列数
+		var drops = [];
+		//初始值
+		for(var x = 0; x < columns; x++){
+			drops[x] = 1;
+		}
+
+		function draw(){
+			//让背景逐渐由透明到不透明
+			ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			//文字颜色
+			ctx.fillStyle = '#0F0';
+			ctx.font = fontSize + 'px arial';
+			//逐行输出文字
+			for(var i = 0; i < drops.length; i++){
+				var text = texts[Math.floor(Math.random()*texts.length)];
+				ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+
+				if(drops[i]*fontSize > canvas.height || Math.random() > 0.95){
+					drops[i] = 0;
+				}
+
+				drops[i]++;
+			}
+		}
+		setInterval(draw, 33);
+	</script>
 </body>
 </html>
-
