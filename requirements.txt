@@ -8,3 +8,4 @@ pymetasploit3==1.0.3
 requests==2.25.1
 retry==0.9.2
 urllib3==1.26.2
+paramiko>=2.7
