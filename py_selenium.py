@@ -47,7 +47,7 @@ class OssimWeb:
             lambda driver: driver.find_element_by_id('h_opt_real_time')).click()
 
         # 获取嵌套iframe页面'main'
-        iframe = ui.WebDriverWait(driver=self.chrome_driver, timeout=50, poll_frequency=5).until(
+        iframe = ui.WebDriverWait(driver=self.chrome_driver, timeout=20, poll_frequency=5).until(
             lambda driver: driver.find_element_by_id('main'))
         self.logger.debug('main')
         # 进入嵌套页面
