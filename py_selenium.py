@@ -102,13 +102,13 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     mainWindow = QMainWindow()
     mainWindow.setWindowTitle('软件机器人抓取数据')
-    mainWindow.resize(320, 240)
+    mainWindow.resize(640, 480)
 
     labal = QLabel(str(result))
     labal.setWordWrap(True)
 
     scroll_label = QScrollArea()
-    scroll_label.setFixedSize(300, 200)
+    scroll_label.setFixedSize(640, 480)
 
     layout = QVBoxLayout()
     layout.addWidget(labal)
