@@ -112,7 +112,6 @@ if __name__ == '__main__':
 
     layout = QVBoxLayout()
     layout.addWidget(labal)
-    # label.setWordWrap(True)
 
     scroll_label.setLayout(layout)
     mainWindow.setCentralWidget(scroll_label)
